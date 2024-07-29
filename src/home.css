@@ -1,0 +1,13 @@
+#designation{
+    animation:anime 2s ease infinite 0.5s ; 
+ }
+ 
+ @keyframes anime {
+     from{
+         background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+     }
+     to{
+         background-color:violet ;
+     }
+ }
+ 
