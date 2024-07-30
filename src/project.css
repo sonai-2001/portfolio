@@ -1,0 +1,13 @@
+#p-left h1{
+    opacity:1;
+    animation:animate 2s ease 0.1s infinite 
+
+}
+@keyframes animate {
+    from{
+         opacity: 1;
+    }
+    to{
+      opacity: 0.4;
+    }
+}
