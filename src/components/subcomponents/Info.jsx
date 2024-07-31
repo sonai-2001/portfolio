@@ -29,12 +29,12 @@ const Info = () => {
           </h1>
         </div>
         <span className="px-2 py-1 border border-zinc-200 rounded-lg shadow-md shadow-white inline-block ml-[45px]">
-          RESUME
+      RESUME
         </span>
       </div>
       <div className="w-[280px] h-[280px] rounded-full border border-zinc-300 overflow-hidden mx-auto my-3  ">
         <img
-          className="w-full h-full object-cover object-top "
+          className="w-full h-full object-cover object-right-top "
           src="myimage1.jpg"
           alt=""
         />

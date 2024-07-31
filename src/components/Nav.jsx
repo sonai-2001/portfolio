@@ -30,7 +30,7 @@ const Nav = () => {
           alt=""
         />
       </div>
-      <div id="nright" className={`absolute md:static  h-[30vh] md:h-0 ${open?"top-[-10px] w-full":"top-[-700px]"} left-[-8px] rounded-sm bg-zinc-600 flex items-center justify-center gap-3 m-2 md:m-0  flex-col md:flex md:flex-row  md:gap-4`}>
+      <div id="nright" className={`absolute z-50 md:static  h-[30vh] md:h-0 ${open?"top-[-10px] w-full":"top-[-700px]"} left-[-8px] rounded-sm bg-zinc-600 flex items-center justify-center gap-3 m-2 md:m-0  flex-col md:flex md:flex-row  md:gap-4`}>
         {["Home", "AboutMe", "ContactMe"].map((item, index) => (
           <Link
             onClick={handleLink}
