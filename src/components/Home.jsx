@@ -15,11 +15,12 @@ const Home = () => {
       <div id="project-heading" className=" w-[25vw] text-center rounded-md shadow-md  shadow-white p-3 uppercase mx-auto border border-zinc-100 mt-32 md:mt-28">
            Projects
       </div>
-      <div id="projects" className="w-full my-4">
+      <div id="projects" className="w-full my-4 relative">
             <Project/>
             <Project/>
             <Project/>
             <Project/>
+            
       </div>
 
       <div id="project-heading" className=" w-[25vw] text-center rounded-md shadow-md  shadow-white p-3 uppercase mx-auto border border-zinc-100 mt-32 md:mt-28">

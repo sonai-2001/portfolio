@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../info.css";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 const Info = () => {
-  const images = [
-      { url: "js.webp", top: "60%", left: "45%", isActive: true },
-      { url: "samer.jpeg", top: "45%", left: "37%", isActive: true },
-    { url: "redux.jpeg", top: "65%", left: "60%", isActive: true },
-    { url: "nodejs.webp", top: "43%", left: "80%", isActive: true },
-  ];
+  const [images, setImages] = useState([
+    { url: "js.webp", top: "60%", left: "45%", isActive: false },
+    { url: "samer.jpeg", top: "45%", left: "37%", isActive: false },
+    { url: "redux.jpeg", top: "35%", left: "60%", isActive: false },
+    { url: "nodejs.webp", top: "23%", left: "10%", isActive: false },
+  ]);
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    console.log("Page scroll: ", Math.floor(latest * 100));
+
+    const showImage = (arr) => {
+      const newImage = images.map((img, ind) => (
+        arr.indexOf(ind) == -1 ? {...img,isActive:false}:{...img,isActive:true}
+    ));
+    setImages(newImage);
+    };
+
+    switch (Math.floor(latest * 100)) {
+      case 0:
+        showImage([]);
+        break;
+      case 1:
+        showImage([0]);
+        break;
+      case 4:
+        showImage([0,1]);
+        break;
+      case 7:
+        showImage([0,1,2]);
+        break;
+      case 10:
+        showImage([0,1,2,3]);
+        break;
+    }
+  });
+
   return (
     <div
       id="info"
@@ -29,7 +61,7 @@ const Info = () => {
           </h1>
         </div>
         <span className="px-2 py-1 border border-zinc-200 rounded-lg shadow-md shadow-white inline-block ml-[45px]">
-      RESUME
+          RESUME
         </span>
       </div>
       <div className="w-[280px] h-[280px] rounded-full border border-zinc-300 overflow-hidden mx-auto my-3  ">
@@ -40,8 +72,8 @@ const Info = () => {
         />
       </div>
       <div
-        className="scroll-images absolute w-[150px] md:w-[200px] h-[150px] md:h-[200px] top-[105%] md:top-[90%] left-[50%]
-    -translate-x-[50%] -translate-y-[50%] border border-zinc-200"
+        className="scroll-images absolute w-[150px]  h-[150px]  top-[105%] md:top-[90%] left-[50%]
+    -translate-x-[50%] -translate-y-[50%]  "
       >
         {images.map(
           (image, ind) =>
