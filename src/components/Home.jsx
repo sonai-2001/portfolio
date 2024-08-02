@@ -5,9 +5,8 @@ import Project from "./subcomponents/Project";
 import Marquee from "./Marquee";
     
 const Home = () => {
-  const skillSet=[
-    ["javascript","React","Redux","Tailwind","Nodejs"],
-    ["javascript","React","Redux","Tailwind","Nodejs"]
+  const projects=[
+    {name:"Products",description:"A product listing website build on react libary where we can see products as per the categories and add and edit product",github:"https://github.com/sonai-2001/products",project:"https://sonai-2001.github.io/products/",video:"product.mp4"}
   ]
   return (
     <div id="home" className="w-full my-4 bg-zinc-900 p-1 md:p-4 ">
@@ -16,10 +15,12 @@ const Home = () => {
            Projects
       </div>
       <div id="projects" className="w-full my-4 relative">
-            <Project/>
-            <Project/>
-            <Project/>
-            <Project/>
+           {projects.map((p,i)=>{
+            return(
+              <Project key={i} p={p}/>
+            )
+           })}
+           
             
       </div>
 
@@ -27,9 +28,10 @@ const Home = () => {
            Skills
       </div>
 
-      <div id="all-skills" className="w-full mt-20 pb-10" >
-        {skillSet.map((skills,ind)=><Marquee key={ind} skills={skills}/>)}
-      </div>
+      <div className="w-full mt-20 overflow-hidden ">
+            <Marquee direction={"left"}/>
+            <Marquee direction={"Right"}/>
+        </div>
     </div>
   );
 };
