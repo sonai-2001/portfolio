@@ -12,7 +12,7 @@ const Home = () => {
         "A video streaming application where we can watch any movie or any shows trailer",
       github: "https://github.com/sonai-2001/fakeflix",
       project: "https://fakeflix-navy.vercel.app/",
-      video: "product.mp4",
+      video: "fakeflix.mp4",
     },
     
     {
