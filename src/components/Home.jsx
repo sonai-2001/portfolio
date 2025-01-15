@@ -7,13 +7,14 @@ import Marquee from "./Marquee";
 const Home = () => {
   const projects = [
     {
-      name: "Products",
+      name: "Fakeflix",
       description:
-        "A product listing website build on react libary where we can see products as per the categories and add and edit product",
-      github: "https://github.com/sonai-2001/products",
-      project: "https://sonai-2001.github.io/products/",
+        "A video streaming application where we can watch any movie or any shows trailer",
+      github: "https://github.com/sonai-2001/fakeflix",
+      project: "https://fakeflix-navy.vercel.app/",
       video: "product.mp4",
     },
+    
     {
       name: "Foodie Fest",
       description:
@@ -21,6 +22,14 @@ const Home = () => {
       github: "https://github.com/sonai-2001/food-ordering-app",
       project: null,
       video: "food_ordering.mp4",
+    },
+    {
+      name: "Products",
+      description:
+        "A product listing website build on react libary where we can see products as per the categories and add and edit product",
+      github: "https://github.com/sonai-2001/products",
+      project: "https://sonai-2001.github.io/products/",
+      video: "product.mp4",
     },
   ];
   return (
