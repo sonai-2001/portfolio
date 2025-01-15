@@ -16,7 +16,7 @@ const Project = ({ p }) => {
       <div id="p-right" className="w-[35%] md:w-[30%] pl-1">
         <p className="text-xs md:text-sm">{description}</p>
         <div className="flex gap-3 md:gap-4 mt-4">
-          <Button link={project} title={"Project Link"} />
+          {project && <Button link={project} title={"Project Link"} />}
           <Button link={github} title={"Github"} />
         </div>
       </div>

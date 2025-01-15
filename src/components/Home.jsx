@@ -6,7 +6,8 @@ import Marquee from "./Marquee";
     
 const Home = () => {
   const projects=[
-    {name:"Products",description:"A product listing website build on react libary where we can see products as per the categories and add and edit product",github:"https://github.com/sonai-2001/products",project:"https://sonai-2001.github.io/products/",video:"product.mp4"}
+    {name:"Products",description:"A product listing website build on react libary where we can see products as per the categories and add and edit product",github:"https://github.com/sonai-2001/products",project:"https://sonai-2001.github.io/products/",video:"product.mp4"},
+    {name:"Foodie Fest",description:"A food ordering website build on react libary where we can see foods as per the categories and add o cart and order",github:"https://github.com/sonai-2001/food-ordering-app",project:null,video:"food_ordering.mp4"},
   ]
   return (
     <div id="home" className="w-full my-4 bg-zinc-900 p-1 md:p-4 ">

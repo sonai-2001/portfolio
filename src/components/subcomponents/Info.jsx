@@ -5,7 +5,7 @@ import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 const Info = () => {
   const [images, setImages] = useState([
     { url: "js.webp", top: "60%", left: "45%", isActive: false },
-    { url: "samer.jpeg", top: "45%", left: "37%", isActive: false },
+    { url: "React.png", top: "45%", left: "37%", isActive: false },
     { url: "redux.jpeg", top: "35%", left: "60%", isActive: false },
     { url: "nodejs.webp", top: "23%", left: "10%", isActive: false },
   ]);
@@ -25,16 +25,16 @@ const Info = () => {
       case 0:
         showImage([]);
         break;
-      case 1:
+      case 7:
         showImage([0]);
         break;
-      case 4:
+      case 13:
         showImage([0,1]);
         break;
-      case 7:
+      case 20:
         showImage([0,1,2]);
         break;
-      case 10:
+      case 28:
         showImage([0,1,2,3]);
         break;
     }
@@ -57,7 +57,7 @@ const Info = () => {
             id="designation"
             className="inline-block md:text-4xl lg:text-5xl mx-2 md:mx-4 border p-2 md:p-3 rounded-lg bg-violet-500 my-4"
           >
-            Software Developer
+            Web Developer
           </h1>
         </div>
         <span className="px-2 py-1 border border-zinc-200 rounded-lg shadow-md shadow-white inline-block ml-[45px]">
@@ -67,12 +67,12 @@ const Info = () => {
       <div className="w-[280px] h-[280px] rounded-full border border-zinc-300 overflow-hidden mx-auto my-3  ">
         <img
           className="w-full h-full object-cover object-right-top "
-          src="myimage1.jpg"
+          src="myimage2.jpg"
           alt=""
         />
       </div>
       <div
-        className="scroll-images absolute w-[150px]  h-[150px]  top-[105%] md:top-[90%] left-[50%]
+        className="scroll-images absolute w-[150px] md:w-[200px]  h-[150px] md:h-[200px]  top-[105%] md:top-[90%] left-[50%]
     -translate-x-[50%] -translate-y-[50%]  "
       >
         {images.map(
